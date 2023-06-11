@@ -1,10 +1,9 @@
 import Axios from 'axios';
-import Notiflix, { Block } from 'notiflix';
+import Notiflix from 'notiflix';
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
 const form = document.querySelector('form');
-const loader = document.querySelector('.loader');
 const gallery = document.querySelector('.gallery');
 const btnLoadMore = document.querySelector('.load-more');
 
@@ -107,6 +106,7 @@ function onSubmitBtn(evt) {
     Notiflix.Notify.failure(
       'Sorry, there are no images matching your search query. Please try again.'
     );
+
      btnLoadMore.classList.add('invisible');
     return;
   }
