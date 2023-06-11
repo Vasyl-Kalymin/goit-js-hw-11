@@ -76,6 +76,7 @@ async function getEvents() {
     Notiflix.Notify.failure(
       'Sorry, there are no images matching your search query. Please try again.'
     );
+    btnLoadMore.classList.add('invisible');
     return;
   };
 
@@ -106,6 +107,7 @@ function onSubmitBtn(evt) {
     Notiflix.Notify.failure(
       'Sorry, there are no images matching your search query. Please try again.'
     );
+     btnLoadMore.classList.add('invisible');
     return;
   }
   btnLoadMore.classList.add('invisible');
